@@ -66,6 +66,7 @@ header p a {
   background-repeat: no-repeat;
   background-position: right;
 }
+
 .bg-1 {
   position: absolute;
   z-index: -1;
@@ -89,10 +90,13 @@ h1 span {
   display: flex;
   justify-content: space-between;
 }
-.hero-content .left-part p {
+.hero-content .left-part .desktop-text {
   color: #546285;
   font-size: 18px;
   max-width: 500px;
+}
+.hero-content .left-part .mobile-text {
+  display: none;
 }
 .hero-content .left-part button {
   padding: 20px 35px;
@@ -142,7 +146,7 @@ h1 span {
     font-size: 40px;
   }
 
-  .hero-content .left-part p {
+  .hero-content .left-part .desktop-text {
     font-size: 14px;
   }
   .hero-content .left-part button {
@@ -180,9 +184,12 @@ h1 span {
     font-size: 35px;
   }
 
-  .hero-content .left-part p {
-    font-size: 12px;
-    width: 240px;
+  .hero-content .left-part .desktop-text {
+    display: none;
+  }
+  .hero-content .left-part .mobile-text {
+    display: block;
+    font-size: 13px;
   }
   .hero-content .left-part button {
     padding: 13px 15px;
@@ -195,4 +202,104 @@ h1 span {
     width: 120%;
     height: 400px;
   }
+  .left-part .review-wrap {
+    font-size: 14px;
+    width: 120px;
+  }
+}
+@media (max-width: 400px) {
+  header p {
+    font-size: 10px;
+  }
+  header p a {
+    font-size: 10px;
+  }
+
+  .desktop-nav img {
+    width: 20px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+  }
+  .mobile-nav i {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .trustpilot {
+    width: 100px;
+    height: 20px;
+    padding-right: 12px;
+  }
+  .hero-content .left-part {
+    justify-content: space-between;
+    padding: 0;
+    gap: 15px;
+  }
+  .hero-content .left-part .desktop-text {
+    display: none;
+  }
+
+  .hero-content .left-part .mobile-text {
+    display: block;
+    font-size: 10px;
+  }
+  .hero-content .left-part button {
+    font-size: 12px;
+
+    width: 120px;
+  }
+
+  .right-part img {
+    width: 110%;
+    height: 250px;
+  }
+  .left-part .review-wrap {
+    font-size: 10px;
+    width: 100px;
+  }
+}
+.second-page {
+  padding: 30px;
+}
+
+.second-page h2 {
+  font-weight: 700;
+  font-size: 55px;
+  color: #35b8be;
+  text-align: center;
+  margin: auto;
+}
+.order-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  place-items: center;
+}
+.order-boxes img {
+  width: 100%;
+  height: auto;
+}
+.information-box{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.information-box h5{
+  font-size: 22px;
+  color: #08090a;
+  font-weight: 700;
+  text-align: center;
+}
+.information-box p{
+  color: #546285;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
 }
