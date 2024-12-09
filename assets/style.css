@@ -22,34 +22,49 @@ header p a {
 
   text-decoration: none;
 }
-nav {
+.desktop-nav {
   display: flex;
   justify-content: space-between;
   padding: 30px;
 }
-nav img {
+.desktop-nav img {
   width: 40px;
 }
-nav .navbar-links {
+.desktop-nav .navbar-links {
   display: flex;
   gap: 25px;
   padding-right: 40px;
 }
-nav .navbar-links a {
+.desktop-nav .navbar-links a {
   text-decoration: none;
   color: #28224b;
   font-size: 16px;
   transition: all 0.3s ease;
 }
-nav .navbar-links a:hover {
+.desktop-nav .navbar-links a:hover {
   color: #35b8be;
+}
+.mobile-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.mobile-nav img {
+  width: 40px;
+}
+.mobile-nav i {
+  font-size: 30px;
 }
 .first-page {
   position: relative;
   display: flex;
-  justify-content: flex-end;
-  padding: 40px;
-  padding-top: 0;
+  justify-content: space-around;
+  padding: 0 30px;
+  background-image: url("./images/Ekran\ şəkli\ 2024-05-04\ 235642.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .bg-1 {
   position: absolute;
@@ -60,7 +75,6 @@ nav .navbar-links a:hover {
   flex-direction: column;
   gap: 20px;
   flex: 1;
-  padding-left: 40px;
 }
 h1 {
   font-size: 60px;
@@ -74,7 +88,6 @@ h1 span {
 .hero-content {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
 }
 .hero-content .left-part p {
   color: #546285;
@@ -108,4 +121,78 @@ h1 span {
 .right-part img {
   width: 100%;
   height: 500px;
+}
+@media (max-width: 900px) {
+  header p {
+    font-size: 13px;
+  }
+  header p a {
+    font-size: 13px;
+  }
+
+  .desktop-nav img {
+    width: 35px;
+  }
+
+  .desktop-nav .navbar-links a {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .hero-content .left-part p {
+    font-size: 14px;
+  }
+  .hero-content .left-part button {
+    padding: 15px 20px;
+    font-size: 14px;
+
+    width: 150px;
+  }
+
+  .right-part img {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media (max-width: 600px) {
+  header p {
+    font-size: 13px;
+  }
+  header p a {
+    font-size: 13px;
+  }
+
+  .desktop-nav img {
+    width: 30px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .hero-content .left-part p {
+    font-size: 12px;
+    width: 240px;
+  }
+  .hero-content .left-part button {
+    padding: 13px 15px;
+    font-size: 12px;
+
+    width: 150px;
+  }
+
+  .right-part img {
+    width: 120%;
+    height: 400px;
+  }
 }

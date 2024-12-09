@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fast-food Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +20,7 @@
         <a href="link">Order Now</a>
       </p>
     </header>
-    <nav>
+    <nav class="desktop-nav">
       <img
         src="./assets/images/5e865e09d8efa3b17076b5ec_webclip-p-130x130q80.png"
         alt="logo"
@@ -31,23 +32,15 @@
         <a href="link">FAQ</a><a href="link">Contact</a>
       </div>
     </nav>
+    <nav class="mobile-nav">
+      <img
+        src="./assets/images/5e865e09d8efa3b17076b5ec_webclip-p-130x130q80.png"
+        alt="logo"
+      />
+      <i class="fa-solid fa-bars"></i>
+    </nav>
     <div class="first-page">
-      <svg
-        class="bg-1"
-        xmlns="http://www.w3.org/2000/svg"
-        width="977.231"
-        height="551.886"
-        viewBox="0 0 977.231 551.886"
-      >
-        <path
-          id="BG_Shape"
-          data-name="BG Shape"
-          d="M996.131,0H18.9L138.321,372.833l857.81,179.053Z"
-          transform="translate(-18.9)"
-          fill="#f5fbfc"
-          opacity="0.87"
-        />
-      </svg>
+ 
       <div class="hero-content">
         <div class="left-part">
           <h1>
@@ -88,12 +81,18 @@
               />
             </g>
           </svg>
-          <p class="review-wrap"><span>4.8 out of 5 </span> based on 2000+ reviews</p>
+          <p class="review-wrap">
+            <span>4.8 out of 5 </span> based on 2000+ reviews
+          </p>
         </div>
         <div class="right-part">
-            <img src="./assets/images/5e865e09d8efa395f376b5c1_Hero Image.png" alt="hero-image">
+          <img
+            src="./assets/images/5e865e09d8efa395f376b5c1_Hero Image.png"
+            alt="hero-image"
+          />
         </div>
       </div>
     </div>
+    <div class="second-page"></div>
   </body>
 </html>
