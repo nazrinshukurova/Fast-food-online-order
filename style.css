@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-weight: 400;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #35b8be;
+  height: 48px;
+}
+header p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+header p a {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+nav img {
+  width: 40px;
+}
+nav .navbar-links {
+  display: flex;
+  gap: 25px;
+  padding-right: 40px;
+}
+nav .navbar-links a {
+  text-decoration: none;
+  color: #28224b;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+nav .navbar-links a:hover {
+  color: #35b8be;
+}
+.first-page {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
+  padding-top: 0;
+}
+.bg-1 {
+  position: absolute;
+  z-index: -1;
+}
+.hero-content .left-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  padding-left: 40px;
+}
+h1 {
+  font-size: 60px;
+  color: #08090a;
+  font-weight: 700;
+  max-width: 580px;
+}
+h1 span {
+  color: #35b8be;
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero-content .left-part p {
+  color: #546285;
+  font-size: 18px;
+  max-width: 500px;
+}
+.hero-content .left-part button {
+  padding: 20px 35px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #35b8be;
+  border-radius: 6px;
+  border: none;
+  width: 200px;
+  color: #fff;
+  cursor: pointer;
+}
+.hero-content .left-part button:hover {
+  background-color: #18767bb7;
+}
+.left-part .review-wrap {
+  color: #08090a;
+  font-size: 18px;
+}
+.left-part .review-wrap span {
+  color: #35b8be;
+}
+.right-part {
+  flex: 1;
+}
+.right-part img {
+  width: 100%;
+  height: 500px;
+}
