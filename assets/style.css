@@ -128,7 +128,7 @@ h1 span {
 }
 
 .second-page {
-  height: 100vh;
+  height: auto;
   padding: 20px;
 }
 
@@ -137,12 +137,11 @@ h1 span {
   font-size: 55px;
   color: #35b8be;
   text-align: center;
-  margin: auto;
 }
 .order-boxes {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 .order-boxes img {
@@ -168,6 +167,139 @@ h1 span {
   text-align: center;
   width: 100%;
 }
+.third-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+    color: #35b8be;
+    font-size: 55px;
+    font-weight: 700;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+  p {
+    color: #546285;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    a {
+      color: #35b8be;
+    }
+  }
+  .button-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+  .button-box button {
+    width: 150px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+    height: 52px;
+  }
+  .button-box .burger {
+    background-color: #35b8be;
+    color: #fff;
+  }
+}
+.order-boxes .information-box img {
+  width: 300px;
+  height: auto;
+}
+.container-menu {
+  height: auto;
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 10px;
+  place-content: center;
+  row-gap: 40px;
+}
+.container-menu .typeofburger {
+  padding: 25px;
+  display: flex;
+  border: 1px solid rgba(53, 184, 190, 0.15);
+  border-radius: 6px;
+  gap: 20px;
+}
+.container-menu .typeofburger img {
+  width: 120px;
+  height: 120px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.container-menu .typeofburger .burger-information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .price-box {
+    display: flex;
+    justify-content: space-around;
+    p {
+      font-size: 16px;
+      color: #35b8be;
+    }
+  }
+  h6 {
+    font-size: 20px;
+    color: #08090a;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    color: #546285;
+    text-align: left;
+  }
+  input {
+    font-size: 15px;
+    color: #333;
+    width: 60px;
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    padding: 8px 6px 8px 12px;
+  }
+  .quantity-button {
+    display: flex;
+    gap: 10px;
+  }
+  .quantity-button button {
+    background-color: #35b8be;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none;
+    color: #fff;
+    height: 45px;
+    width: 100px;
+    border: none;
+  }
+}
+.menu-button {
+  min-height: 50px;
+  width: 200px;
+  margin: auto;
+  background-color: #35b8be;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  color: #fff;
+  padding: 9px 15px;
+  border: none;
+  margin-top: 20px;
+}
+
 @media (max-width: 900px) {
   header p {
     font-size: 13px;
@@ -183,11 +315,24 @@ h1 span {
   .desktop-nav .navbar-links a {
     font-size: 13px;
   }
-
+  .first-page {
+    background-position: center;
+  }
   h1 {
+    text-align: center;
     font-size: 40px;
   }
-
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .left-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .hero-content .left-part .desktop-text {
     font-size: 14px;
   }
@@ -197,8 +342,11 @@ h1 span {
 
     width: 150px;
   }
-
+  .right-part {
+    display: flex;
+  }
   .right-part img {
+    padding-left: 40px;
     width: 100%;
     height: 400px;
   }
@@ -212,10 +360,20 @@ h1 span {
   .information-box p {
     font-size: 12px;
   }
+  .order-boxes {
+    flex-wrap: wrap;
+  }
+  .container-menu {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    place-content: center;
+    row-gap: 20px;
+    margin: 0 20px;
+  }
 }
 @media (max-width: 600px) {
   header p {
-    font-size: 13px;
+    font-size: 15px;
   }
   header p a {
     font-size: 13px;
@@ -241,22 +399,11 @@ h1 span {
   }
   .hero-content .left-part .mobile-text {
     display: block;
-    font-size: 13px;
-  }
-  .hero-content .left-part button {
-    padding: 13px 15px;
-    font-size: 12px;
-
-    width: 150px;
+    font-size: 15px;
   }
 
-  .right-part img {
-    width: 120%;
-    height: 400px;
-  }
   .left-part .review-wrap {
     font-size: 14px;
-    width: 120px;
   }
   .second-page h2 {
     font-size: 35px;
@@ -267,6 +414,18 @@ h1 span {
   }
   .information-box p {
     font-size: 10px;
+  }
+  .button-box {
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+  .third-page {
+    h2 {
+      font-size: 45px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 }
 @media (max-width: 400px) {
@@ -326,5 +485,13 @@ h1 span {
   .left-part .review-wrap {
     font-size: 10px;
     width: 100px;
+  }
+  .third-page {
+    h2 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 }
